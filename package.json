@@ -1,0 +1,27 @@
+{
+  "name": "api-gateway",
+  "version": "0.1.0",
+  "description": "Cloudoki's API Gateway",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_PATH=. node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cloudoki/api-gateway.git"
+  },
+  "author": "Tiago Alves <tiago.alves@cloudoki.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cloudoki/api-gateway/issues"
+  },
+  "homepage": "https://github.com/Cloudoki/api-gateway#readme",
+  "dependencies": {
+    "boom": "^4.2.0",
+    "bunyan": "^1.8.3",
+    "hapi": "^15.2.0",
+    "joi": "^9.2.0",
+    "request": "^2.75.0"
+  }
+}
