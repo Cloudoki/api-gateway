@@ -11,11 +11,15 @@ const server = new Hapi.Server();
 server.connection({ port: config.port });
 
 server.register([
-  // Register the user handling plugin
+  // firstly try to proxy the service
   {
-    register: require('./lib/plugins/ping/index.js'),
-    routes: { prefix: '/v1' }
+    register: require('./lib/plugins/proxy')
   },
+  // Register the user handling plugin
+  // {
+  //   register: require('./lib/plugins/ping/index.js'),
+  //   routes: { prefix: '/v1' }
+  // },
 ], () => {
 
   // Actually start the server (start listening for incoming requests)
